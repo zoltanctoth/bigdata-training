@@ -164,19 +164,45 @@ cat birdstrikes.csv | cut -d, -f9 | sort | uniq
 ```
 
 * *Excercise*:
-In how many states did accidents happen
+In how many states did accidents happen?
 ```
-cat birdstrikes.csv | cut -d, -f6 | sort -u | wc -l
+cat birdstrikes.csv | cut -d, -f6 | sort | uniq | wc -l
 ```
 
 * `uniq -c` -
-How many incidents were there by state?/
+How many incidents were there by state?
 ```
-cat birdstrikes.csv | cut -d, -f6 | uniq -c
+cat birdstrikes.csv | cut -d, -f6 | sort | uniq -c
 ```
 
 * *Excercise*:
-How many $>0 incidents were by Airlines. Output should be sorted by airline
+How many incidents were there by Airlines. Output should be sorted by airline
 ```
-cat birdstrikes.csv | cut -d, -f5 | uniq -c
+cat birdstrikes.csv | cut -d, -f5 | sort | uniq -c | sort -k' ' -t2
+```
+
+* `mcedit` -
+The whole thing works with scripts too.
+```
+mcedit groupcount
+sort | uniq -c
+chmod 755 groupcount
+```
+
+* `awk` -
+Sum costs
+```
+cat birdstrikes.csv | cut -d, -f10 | awk 'BEGIN { s=0; } { s = s + $1; } END {print s; }'
+```
+
+* *Excercise* -
+Get the number of lines with awk
+```
+cat birdstrikes.csv | awk 'BEGIN { s=0; } { s = s + 1 } END {print s; }'
+```
+
+* `awk` -
+Demo:
+```
+cat birdstrikes.csv | cut -d, -f5,10 | sed 1d | sort -t, | awk -F, 'BEGIN { last="";sum=0; } { if (last != $1){ if (last != ""){ print last","sum;} last = $1;sum=0;} sum = sum + $2} END{print last","sum;}'
 ```
