@@ -83,12 +83,13 @@ head -n 5 birdstrikes.csv | tail -n 1 > 5thline.csv
 * `grep` -
 Only show incidents from California
 ```
-grep birdstrikes.csv | grep Airplane
+cat birdstrikes.csv | grep Airplane
 ```
-* `grep` -
+
+* `grep -v` -
 Only show incidents NOT with Airplanes
 ```
-grep birdstrikes.csv | grep -v Airplane
+cat birdstrikes.csv | grep -v Airplane
 ```
 
 * *Excercise*:
@@ -96,6 +97,41 @@ show the first 3 Helicopter incidents NOT in Colorado
 ```
 cat birdstrikes.csv | grep Helicopter | grep -v Colorado | head -3
 ```
+
+* `grep -i` -
+Ignore case
+```
+cat birdstrikes.csv | grep -i airplane
+```
+
+* `Regular expressions` -
+Check lines that contain `.`
+```
+cat birdstrikes.csv | grep '.'
+cat birdstrikes.csv | grep '\.'
+cat birdstrikes.csv | grep -F '\.'
+```
+
+* `More Regular expressions` -
+Check lines that contain `.`
+```
+cat birdstrikes.csv | grep -E '^1'
+cat birdstrikes.csv | grep -E ',0$'
+cat birdstrikes.csv | grep -E '^[^,]'
+cat birdstrikes.csv | cut -d, -f5 | grep -E '^$'
+```
+
+* *Excercise*: List those files that don't start with 1
+```
+cat birdstrikes.csv | grep -E '^[^1]'
+cat birdstrikes.csv | grep -v '^1'
+```
+
+* *Excercise*: List those files that don't have empty values
+```
+cat birdstrikes.csv | grep -v ',,' | grep -vE '^,' | grep -vE ',$'
+```
+
 
 * `wc` -
 show the line, word and character count of birdstrikes
@@ -181,14 +217,6 @@ How many incidents were there by Airlines. Output should be sorted by airline
 cat birdstrikes.csv | cut -d, -f5 | sort | uniq -c | sort -k' ' -t2
 ```
 
-* `mcedit` -
-The whole thing works with scripts too.
-```
-mcedit groupcount
-sort | uniq -c
-chmod 755 groupcount
-```
-
 * `awk` -
 Sum costs
 ```
@@ -201,8 +229,51 @@ Get the number of lines with awk
 cat birdstrikes.csv | awk 'BEGIN { s=0; } { s = s + 1 } END {print s; }'
 ```
 
+* `awk NF` -
+Is the csv well formatted - get the number of columns?
+cat birdstrikes.csv | awk -F, '{ print $NF }' | sort | uniq -c
+
+* `sed` -
+Replace things
+```
+sed 's/,/;/g'
+sed '1d' # deletes the header
+
 * `awk` -
 Demo:
 ```
 cat birdstrikes.csv | cut -d, -f5,10 | sed 1d | sort -t, | awk -F, 'BEGIN { last="";sum=0; } { if (last != $1){ if (last != ""){ print last","sum;} last = $1;sum=0;} sum = sum + $2} END{print last","sum;}'
 ```
+
+* `bash script` -
+Write a script that gets the first column
+```
+#mcedit firstcolumn
+cut -d, -f1
+# chmod
+# shebang
+```
+
+* `bash` -
+script parameters
+```
+# mcedit add-header
+echo $1
+cat
+```
+
+* `$()` -  Create stat script
+```
+mcedit stats
+echo header
+cat $1 | head -1
+echo Nr of lines: $(wc -l $1)
+echo Column statistics: $(cat $1 | awk '{ print $NF }' | sort -u | wc -l)
+```
+
+* *Excercise*:
+Create a script that prints:
+ - Nr of lines
+ - First 10 lines
+ - Last 10 lines
+ - number of empty lines
