@@ -20,4 +20,4 @@ def read_group():
 
 
 for key, values in read_group():
-    print "%s\t%d" % (key, len(values))
+    print "%s\t%s" % (key, str(values))
