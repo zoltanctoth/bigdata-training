@@ -1,18 +1,11 @@
 # Command line data excercises
 
-1. `mkdir` `cd` `TAB` `CTRL+L` -
-Create a directory called `training` and step into it.
+1. `cd`, `ls`  -
+Go to the datasets directory and check its contents:
 ```
-mkdir training
-cd training
-```
-
-* `cd ..` `cp` -
-Copy the `birdstrikes.csv` into the training directory.
-```
-cd ..
-cp birdstrikes.csv training
-cd training
+cd training/datasets
+ls
+ls -l
 ```
 
 * `cat` -
