@@ -3,7 +3,6 @@ CREATE EXTERNAL table birdstrikes
     id INT,
     aircraft STRING,
     state STRING,
-    size STRING,
     cost INT
 )
 ROW FORMAT
