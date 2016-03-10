@@ -1,4 +1,4 @@
-CREATE EXTERNAL table bs2 
+CREATE EXTERNAL table birdstrikes 
 (
     id INT,
     aircraft STRING,
