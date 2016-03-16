@@ -52,6 +52,6 @@ rm birdstrikes.csv
 # Solution
 hadoop fs -get birdstrikes.csv birdstrikes.csv
 head -n 5 birdstrikes.csv > top5.csv
-hadoop mkdir top5.csv
-hadoop put top5.csv top5/top5.csv
+hadoop fs -mkdir top5.csv
+hadoop fs -put top5.csv top5/top5.csv
 ````
