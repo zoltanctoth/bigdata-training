@@ -17,7 +17,7 @@ cat birdstrikes.csv
 * `less` -
 Explore the csv
 ```
-less birdstrkes.csv
+less birdstrikes.csv
 ```
 
 * `head` -
@@ -76,7 +76,7 @@ head -n 5 birdstrikes.csv | tail -n 1 > 5thline.csv
 * `grep` -
 Only show incidents from California
 ```
-cat birdstrikes.csv | grep Airplane
+cat birdstrikes.csv | grep California 
 ```
 
 * `grep -v` -
@@ -151,9 +151,9 @@ cat birdstrikes.csv | cut -d, -f2,3
 ```
 
 * *Excercise*:
-display only the *state* and the *bird_size* columns of Airplane accidents
+display only the *state* and the *bird size* columns of Airplane accidents
 ```
-cat birdstrikes.csv | grep Airplane | cut -d, -f5,8
+cat birdstrikes.csv | grep Airplane | cut -d, -f5,9
 ```
 
 * *Excercise*:
@@ -169,21 +169,21 @@ sort birdstrikes.csv
 ```
 
 * `sort -k -t` -
-Sort by feet above ground
+Sort by feet above ground, high values firsr
 ```
-sort -t11 -k, | less
+cat birdstrikes.csv | sort -k11 -t, -n -r | less
 ```
 
 * *Excercise*:
 Which was the most expensive incident?
 ```
-sort -t10 -k, | tail -1
+cat birdstrikes.csv | sort -k10 -t, -n | tail -1
 ```
 
 * *Excercise*:
 In which Area did the most expensive incident happen that was caused by a Small bird?
 ```
-sort -t10, -k, | grep Small | cut -f, -d6
+cat birdstrikes.csv | sort -t, -k10 -n | grep Small | cut -d, -f6 | head -1
 ```
 
 * `sort | uniq` -
@@ -207,7 +207,7 @@ cat birdstrikes.csv | cut -d, -f6 | sort | uniq -c
 * *Excercise*:
 How many incidents were there by Airlines. Output should be sorted by airline
 ```
-cat birdstrikes.csv | cut -d, -f5 | sort | uniq -c | sort -k' ' -t2
+cat birdstrikes.csv | cut -d, -f5 | sort | uniq -c | sort -t' ' -k2 -n
 ```
 
 * `awk` -
