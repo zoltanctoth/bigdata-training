@@ -13,7 +13,7 @@ CSV Format:
 
 CSV Format:
 
-| user_id | amount |
+| user_id | city |
 |------|---------|--------|
 |positive integer|string, max length=10|
 
