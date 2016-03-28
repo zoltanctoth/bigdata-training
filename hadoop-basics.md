@@ -40,10 +40,10 @@ hadoop fs -cp birdstrikes.csv birdstrikes
 # What happens at moving (mv)? No data movement, it's a simply change in the namenode
 
 # Remove a directory
-hadoop fs -rm -r birdstrikes
+hadoop fs -rm -skipTrash -r birdstrikes
 
 # Remove the local file
-rm birdstrikes.csv
+rm b.csv
 
 # Excercise:
 # Get the birdstrikes.csv. get the 5 lines and put it into top5.csv
@@ -52,6 +52,6 @@ rm birdstrikes.csv
 # Solution
 hadoop fs -get birdstrikes.csv birdstrikes.csv
 head -n 5 birdstrikes.csv > top5.csv
-hadoop fs -mkdir top5.csv
+hadoop fs -mkdir top5
 hadoop fs -put top5.csv top5/top5.csv
 ````
