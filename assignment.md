@@ -1,7 +1,7 @@
 Assignment
 ==========
 
-There is a file on S3, at `s3://zoltanctoth/ceu/signup.log` . It is rather big, but fortunately there is a sample of it at `s3://zoltanctoth/seu/signup-sample.log`.
+There is a file on S3, at `s3://zoltanctoth/ceu/signup.log` . It is rather big, but fortunately there is a sample of it at `s3://zoltanctoth/ceu/signup-sample.log`.
 
 AWS/S3/Unix
 -----------
