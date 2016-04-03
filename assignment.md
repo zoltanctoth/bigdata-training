@@ -48,7 +48,21 @@ who come with an *outlook.com* email address. Is this right? What can you see in
 
 Spark
 ---
-Coming soon.
+**If you consider yourself as a non-technical person:**
+
+1. Answer this question using Jupyter (iPython) Notebook on your virtual machine:
+
+ What are the different amounts that were payed by users from the Netherlands (country code NL)? The input file is at `file:///home/bigdata/training/datasets/registration.log`. Show the results on the screen. Download the notebook (File -> Download as) in *HTML* fromat and upload it into your bucket with the name `spark-notebook.html`.
+
+**If you consider yourself as a technical person:**
+
+1. There is a registration/payment log with email addresses in `s3://zoltanctoth/ceu/web.log`.
+2. The results of a customer satisfaction survey are stored in `s3://zoltanctoth/ceu/satisfaction.txt`.
+3. We have a hypothesis that those users who have *gmail.com* email addresses are in general more satisfied with our services than those,
+who come with an *outlook.com* email address. Is this right? What can you see in the data? Use Spark on AWS.
+4. Ah, also, someone said that this is especially true if we only check the users that come from the Netherlands. Unfortunately can only get the country code from the payment records from web.log, but that might be enough to prove or refute this hypothesis. What do you see in the data?
+6. Show the results on the screen. Download the notebook (File -> Download as) in *HTML* fromat and upload it into your bucket with the name `spark-advanced-notebook.html`. 
+ You will need a few commands here which we have not covered. [The Spark programming guide manual](http://spark.apache.org/docs/latest/programming-guide.html#working-with-key-value-pairs) will help, especially the part with *Working with pairs*.
 
 Finishing up
 ----------
