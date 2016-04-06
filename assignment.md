@@ -73,4 +73,4 @@ Finishing up
 ----------
 1. Please go to the AWS Management Console and make sure that
 I will be able access the files you uploaded (Select the files in the S3 browser and press *Actions* -> *Make Public*)
-2. Send me an email to *zoltanctot@gmail.com* that you are done.
+2. Send me an email to *zoltanctoth@gmail.com* that you are done.
