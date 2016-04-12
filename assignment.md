@@ -3,6 +3,8 @@ Assignment
 
 There is a file on S3, at `s3://zoltanctoth/ceu/signup.log` . It is rather big, but fortunately there is a sample of it at `s3://zoltanctoth/ceu/signup-sample.log`.
 
+**NOTE: Some of you reported that s3cmd cp does not work correctly. If you have problems executing `s3cmd cp`, please execute `s3cmd get` and `s3cmd put` to solve the issue of s3cmd cp not working**.
+
 AWS/S3/Unix
 -----------
 1. Create an S3 bucket using the format `ceu2016<your username>`. Mine would be: `ceu2016tothz`.
