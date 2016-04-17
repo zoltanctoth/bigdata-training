@@ -42,8 +42,8 @@ Pig
 2. The results of a customer satisfaction survey are stored in `s3://zoltanctoth/ceu/satisfaction.txt`.
 3. We have a hypothesis that those users who have *gmail.com* email addresses are in general more satisfied with our services than those,
 who come with an *outlook.com* email address. Is this right? What can you see in the data?
-4. Ah, also, someone said that this is especially true if we only check the users that come from countrties in Europe. Unfortunately can only get the country code from the payment records from web.log, but that might be enough to prove or refute this hypothesis. What do you see in the data?
-5. Upload the two solutions into your bucket with the name: `happier.pig` and `nl.pig`.
+4. We have a hypothesis that our happiest user comes from the Netherlands? is this true? Create a script than only outputs the happiest user, together with the his/her country.
+5. Upload the two solutions into your bucket with the name: `happier.pig` and `happiest.pig`.
 6. Upload your analysis (what you think and why) in text format into your bucket with the name `emailanalysis.txt`.
 
  You will need a few commands here which we have not covered. [The Pig Latin Reference manual](http://pig.apache.org/docs/r0.14.0/basic.html) is a great piece of documentation. Also, you can find [very similar pig scripts](https://github.com/zoltanctoth/bigdata-training/tree/master/pig/solutions) on my github.
@@ -64,7 +64,7 @@ Spark
 2. The results of a customer satisfaction survey are stored in `s3://zoltanctoth/ceu/satisfaction.txt`.
 3. We have a hypothesis that those users who have *gmail.com* email addresses are in general more satisfied with our services than those,
 who come with an *outlook.com* email address. Is this right? What can you see in the data? Use Spark on AWS.
-4. Ah, also, someone said that this is especially true if we only check the users that come from countrties in Europe. Unfortunately can only get the country code from the payment records from web.log, but that might be enough to prove or refute this hypothesis. What do you see in the data?
+4. We have a hypothesis that our happiest user comes from the Netherlands? is this true? Only output the happiest user, together with the his/her country.
 5. Show the results on the screen. Download the notebook (File -> Download as) in *HTML* fromat and upload it into your bucket with the name `spark-advanced-notebook.html`. 
  You will need a few commands here which we have not covered. [The Spark programming guide manual](http://spark.apache.org/docs/latest/programming-guide.html#working-with-key-value-pairs) will help, especially the part with *Working with key value pairs*.
 
