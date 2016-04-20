@@ -29,7 +29,7 @@ Pig
 
 1. Answer this question using pig:
 
- What are the different amounts that were payed by users from the Netherlands (country code NL)? DUMP the file on the screen. STORE these amounts in a file called `amounts.txt` in your bucket (you will need to use the STORE command with the path `s3://<yourbucketname>/amounts.txt`). (If you do it correctly, the file will contain two lines:
+ What are the different amounts that were payed by users from the Netherlands (country code NL)? DUMP the file on the screen. STORE these amounts in a an output called `amounts.txt` in your bucket (you will need to use the STORE command with the path `s3://<yourbucketname>/amounts.txt`). (If you do it correctly, the file will contain two lines:
 ```
 59
 99
