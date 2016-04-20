@@ -74,5 +74,5 @@ who come with an *outlook.com* email address. Is this right? What can you see in
 Finishing up
 ----------
 1. Please go to the AWS Management Console and make sure that
-I will be able access the files you uploaded (Select the files in the S3 browser and press *Actions* -> *Make Public*)
+I will be able access the files you uploaded (Select the files in the S3 browser and press *Actions* -> *Make Public*). Please apply this also to your bucket, not only the files.
 2. Send me an email to *zoltanctoth@gmail.com* that you are done.
