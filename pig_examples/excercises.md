@@ -32,7 +32,7 @@ Tell the total amount of money paid by users living in each city
 ####  first_amount_paid_by_user.pig
 Get the first payment for each user and display the userid and the amount paid.
 
-#### this one goes for the real men - paying_users_by_region:
+#### this one goes for the real engineers - paying_users_by_region:
 How many paying users there are by Region?
 
 *(Region := Megye. Write a Jython UDF that maps cities to regions)*
