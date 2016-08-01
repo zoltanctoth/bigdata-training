@@ -1,4 +1,4 @@
-SPARK.HOME=paste("/opt/spark")
+SPARK.HOME=paste("/opt/spark-1.6.1")
 Sys.setenv("SPARK_HOME"=SPARK.HOME)
 
 .libPaths(c(file.path(Sys.getenv("SPARK_HOME"), "R", "lib"), .libPaths()))
@@ -14,15 +14,16 @@ sc <- sparkR.init()
 sqlContext <- sparkRSQL.init(sc)
 
 # Logistic Regression
-data.dir = "/Users/zoltanctoth/src/my/spark-ml-intro/data/" # Change me!
+data.dir = "/Users/zoltanctoth/src/spark-ml-intro/data/" # Change me!
 
 training = SparkR::read.df(sqlContext, file.path(data.dir, "training.parquet"))
 test = SparkR::read.df(sqlContext, file.path(data.dir, "test.parquet"))
 
-is_late <- function(delay) SparkR::ceil(delay/100000)
+is_late <- function(delay) SparkR::ceil(delay/100000) * 1.0
 training$label <- is_late(training$arrdelay)
 
 head(training)
+printSchema(training)
 
 model <- glm(is_late ~ month + deptime, training, family = "binomial")
 predicted.data <- predict(model, test)
@@ -31,3 +32,5 @@ printSchema(predicted.data)
 predicted.data$features <- NULL
 
 SparkR::write.df(predicted.data, file.path(data.dir,"prediction.json"), "json")
+
+head(predicted.data)
