@@ -1,4 +1,4 @@
-# smalldata-training
+# SQL notebook
 
 ## Selecting data
 
