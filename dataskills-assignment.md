@@ -44,10 +44,24 @@ Your result will be something like that:
 
 ## 3 Python: Decide if numbers are negative or positive
 
-1. Create a function (call it ```sgn```) which takes a number and returns ```-1``` if the number is negative, ```1``` if the number is positive and ```0``` for 0.
+1. Create a function (call it ```sgn```) which takes a number and returns ```-1``` if the number is negative, ```1``` if the number is positive and ```0``` for 0. This is usually called a *signum* function.
 2. Create this list: ```l = [-10,10,5,0,-5]```
 3. Loop through this list and for each number in this list print the number and its ```sgn``` in this form: ```The signum value of <the number> is <sgn value of the number>.```. This means your output should look something like this:
 
+![Python screenshot](https://github.com/zoltanctoth/bigdata-training/blob/master/python-result.png)
+
 **Assignment outcome:** A screenshot of your jupyter notebook with your code and output.
 
+## 4. Martin Kleppmann's talk:
+Watch Martin Kleppmann's talk: https://www.youtube.com/watch?v=Gqdr0DiNh5g&feature=youtu.be
+No delivery here.
 
+## Delivery:
+Please send me an email with the following content:
+1. Your CEU id / CEU email
+2. The unix command
+3. The SQL command
+4. The python notebook screenhot.
+
+## Deadline for delivery:
+Sun 8 Oct 2016 20:00 CET
