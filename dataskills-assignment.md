@@ -62,5 +62,6 @@ Please send me an email with the following content:
 3. The SQL command
 4. The python notebook screenhot.
 
+My email is *zoltanctoth+dataskills@gmail.com*
 ## Deadline for delivery:
 Sun 9 Oct 2016 20:00 CET
