@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+echo "DROP TABLE IF EXISTS birdstrikes" | psql training 
+cat create_table.sql | psql training 
+cat load_data.sql | psql training 
+
+echo "OK"
+
