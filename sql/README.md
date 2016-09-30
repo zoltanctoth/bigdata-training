@@ -87,13 +87,11 @@ ORDER BY cost DESC;
 `SELECT DISTINCT state, size FROM birdstrikes;`
 
 ## WORKSHOP
-* Hány dollár volt a legtöbb kár?
-* ^Ez melyik államban történt és milyen madár okozta?
-* Melyik az első három állam ABC sorrendben?
-* Milyen méretű madarak vannak az adatbázisban?
-* Mekkora méretű madár okozta a legnagyobb kárt Missouri-ban?
-* Hány államban történt baleset?
-* A hét melyik napján történt a legnagyobb kár?
+* What's the maximum overall cost
+* ^^ In which state did this accident happen?
+* Display the first three states in alphabetical order?
+* Display the bird sizes (don't display the "empty" cell)
+* What is the size of the bird that caused the biggest damage in Missouri?
 
 ## SOME more DML
 
@@ -158,12 +156,6 @@ SELECT state, COUNT(*) FROM birdstrikes
 WHERE state IS NOT NULL
 GROUP BY state HAVING COUNT(*) > 100;
 ```
-
-## WORKSHOP
- * Melyik államban történt a legtöbb összkár
- * Átlagosan melyik méretű madár mekkora kárt okoz?
- * Írasd ki állam és madár-méretenként (tehát 2 mezőn együttesen csoportosítva) a legnagyobb kár értékét.
- * ^^ Ebből irasd ki az átlagos kárt azokban az állam/méret csoportokban, ahol több, mint 1000 baleset történt
 
 ## JOINING
 ```
