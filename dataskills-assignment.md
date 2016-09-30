@@ -13,7 +13,7 @@ You will find a file on the virtual machine, in your home: ```training/datasets/
 Check out the contents of this file. The columns of these file are: *date, user_id, amount_payed, card_type*. 
 
 Answer the following business question: How many transactions can we see by card type on 2015-07-11?
-The output of your command will be most probasbly similar to this:
+The output of your command will be most probably similar to this:
 ```
      39 AMEX
      87 MasterCard
@@ -29,7 +29,7 @@ cd training/sql
 ```
 
 Answer the following business question:
-Which are the states with the least average cost? Only take those states in consideration where the average cost is bigger than 0. Only show the first 3 results by average cost ascending.
+Which are the states with the least average cost? Only take those states in consideration where the average cost is bigger than 0 (you will need to use HAVING). Only show the first 3 results by average cost ascending.
 
 Your result will be something like that:
 ```
@@ -54,7 +54,6 @@ Your result will be something like that:
 
 ## 4. Martin Kleppmann's talk:
 Watch Martin Kleppmann's talk: https://www.youtube.com/watch?v=Gqdr0DiNh5g&feature=youtu.be
-No delivery here.
 
 ## Delivery:
 Please send me an email with the following content:
