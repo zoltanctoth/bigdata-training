@@ -8,4 +8,4 @@ CREATE EXTERNAL table birdstrikes
 ROW FORMAT
 DELIMITED FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n' STORED AS TEXTFILE
-LOCATION '/user/zoltanctoth/birdstrikes';
+LOCATION 's3://ceu2016/birdstrikes';
